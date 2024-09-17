@@ -27,6 +27,7 @@ import {MatPaginator} from "@angular/material/paginator";
 import {AuthInterceptor} from "./auth/auth-interceptor";
 import {ErrorInterceptor} from "./error-interceptor";
 import { ErrorComponent } from './error/error.component';
+import {MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -59,6 +60,10 @@ import { ErrorComponent } from './error/error.component';
     MatPaginator,
     ReactiveFormsModule,
     HttpClientModule,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
   ],
   providers: [
     {

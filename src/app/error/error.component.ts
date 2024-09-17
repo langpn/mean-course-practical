@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {AuthService} from "../auth/auth.service";
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-error',
@@ -6,5 +8,6 @@ import {Component} from '@angular/core';
   styleUrl: './error.component.css'
 })
 export class ErrorComponent {
-  message = 'An unknown error occurred!';
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { message: string }) {
+  }
 }
