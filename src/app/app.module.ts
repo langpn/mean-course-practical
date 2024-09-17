@@ -25,6 +25,7 @@ import {LoginComponent} from './auth/login/login.component';
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
 import {MatPaginator} from "@angular/material/paginator";
 import {AuthInterceptor} from "./auth/auth-interceptor";
+import {ErrorInterceptor} from "./error-interceptor";
 
 @NgModule({
   declarations: [
@@ -61,6 +62,11 @@ import {AuthInterceptor} from "./auth/auth-interceptor";
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
       multi: true,
     },
     provideAnimationsAsync(),
