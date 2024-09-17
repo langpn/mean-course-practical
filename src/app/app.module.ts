@@ -4,10 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
-import {FormsModule} from "@angular/forms";
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, provideHttpClient} from "@angular/common/http";
-import {SignupComponent} from './auth/signup/signup.component';
-import {LoginComponent} from './auth/login/login.component';
 import {AuthInterceptor} from "./auth/auth-interceptor";
 import {ErrorInterceptor} from "./error-interceptor";
 import {ErrorComponent} from './error/error.component';
@@ -18,14 +15,11 @@ import {PostsModule} from "./posts/posts.module";
   declarations: [
     AppComponent,
     HeaderComponent,
-    SignupComponent,
-    LoginComponent,
     ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     AngularMaterialModule,
     PostsModule,
