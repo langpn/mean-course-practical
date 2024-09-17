@@ -12,7 +12,6 @@ export class PostsService {
   constructor(private http: HttpClient, private router: Router) {
   }
 
-  // Kiểu any có thể để cụ thể giống trong DB, nhưng any để tiết kiệm tgian
   getPosts(postPerPage: number, currentPage: number) {
     const queryParams = `?pagesize=${postPerPage}&page=${currentPage}`;
     this.http.get<{ message: string, posts: any, maxPosts: number }>(
@@ -34,7 +33,7 @@ export class PostsService {
           }
         }))
       .subscribe(transformedPostData => {
-        console.log(transformedPostData);
+        // console.log(transformedPostData);
         this.posts = transformedPostData.posts;
         this.postsUpdated.next({
           posts: [...this.posts],

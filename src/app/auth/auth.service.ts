@@ -33,7 +33,7 @@ export class AuthService {
     };
     this.http.post('http://localhost:3000/api/user/signup', authData)
       .subscribe(response => {
-        console.log(response)
+        // console.log(response)
         this.router.navigate(['/']);
       });
   };
@@ -45,7 +45,7 @@ export class AuthService {
     };
     this.http.post<{ token: string, expiresIn: number }>('http://localhost:3000/api/user/login', authData)
       .subscribe(response => {
-        console.log(response);
+        // console.log(response);
         const token = response.token;
         this.token = token;
         if (token) {
