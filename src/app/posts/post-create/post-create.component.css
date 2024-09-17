@@ -1,0 +1,29 @@
+mat-spinner {
+  margin: auto;
+}
+
+mat-card {
+  /*margin-bottom: 2rem;*/
+  padding: 1rem;
+}
+
+mat-form-field {
+  display: block;
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  height: 100%;
+}
