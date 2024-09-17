@@ -82,6 +82,7 @@ export class PostsService {
         title: title,
         content: content,
         imagePath: image,
+        creator: '',
       };
     }
     this.http.put<{ message: string }>(`http://localhost:3000/api/posts/${id}`, postData).subscribe(() => {

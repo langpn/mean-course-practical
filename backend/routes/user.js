@@ -53,17 +53,17 @@ router.post("/login", (req, res, next) => {
           userId: fetchedUser._id
         },
         'secret_this_should_be_longer',
-        {expiresIn: '1h'}
+        {expiresIn: '1h'},
       );
       res.status(200).json({
         token: token,
         expiresIn: 3600,
-        userId: fetchedUser.userId
+        userId: fetchedUser._id,
       });
     })
     .catch(err => {
       return res.status(401).json({
-        message: "Auth failed"
+        message: `Auth failed: ${err}`,
       });
     });
 });
