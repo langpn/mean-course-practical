@@ -26,6 +26,7 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
 import {MatPaginator} from "@angular/material/paginator";
 import {AuthInterceptor} from "./auth/auth-interceptor";
 import {ErrorInterceptor} from "./error-interceptor";
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {ErrorInterceptor} from "./error-interceptor";
     PostCreateComponent,
     HeaderComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,7 @@ import {ErrorInterceptor} from "./error-interceptor";
     provideAnimationsAsync(),
     provideHttpClient(),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }
