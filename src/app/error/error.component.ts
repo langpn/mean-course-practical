@@ -1,5 +1,4 @@
 import {Component, Inject} from '@angular/core';
-import {AuthService} from "../auth/auth.service";
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
